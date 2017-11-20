@@ -6,9 +6,9 @@ window.addEventListener("devicemotion", on_device_motion);
 
 function on_device_orientation(e)
 {
-	document.getElementById("id_z").innerHTML = + Math.round(e.alpha * 100) / 100; 
-	document.getElementById("id_x").innerHTML = + Math.round(e.beta * 100) / 100;
-	document.getElementById("id_y").innerHTML = + Math.round(e.gamma * 100) / 100;
+	document.getElementById("id_z").innerHTML = "alpha =" + Math.round(e.alpha * 100) / 100; 
+	document.getElementById("id_x").innerHTML = "beta =" + Math.round(e.beta * 100) / 100;
+	document.getElementById("id_y").innerHTML = "gamma = " + Math.round(e.gamma * 100) / 100;
 }
 
 function on_device_motion(e)

@@ -1,5 +1,5 @@
 
-[5:49 PM, 12/4/2017] Sandu: document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.28.0";
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.28.0";
 
 window.addEventListener("deviceorientation", on_device_orientation);
 //window.addEventListener("devicemotion", on_device_motion);

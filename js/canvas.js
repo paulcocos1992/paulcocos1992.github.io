@@ -3,7 +3,7 @@ document.getElementById("id_business_version").innerHTML = "Business version = 2
  window.addEventListener("devicemotion",on_device_motion);
 
  //---------------------------------------------------------------
- function deseneaza_cerc()//(unghi1,unghi2)
+ function deseneaza_cerc(u)//(unghi1,unghi2)
  {
 	var canvas = document.getElementById("id_canvas");
 	var ctx = canvas.getContext("2d");
@@ -11,15 +11,17 @@ document.getElementById("id_business_version").innerHTML = "Business version = 2
     ctx.rect(0,0,400,400);
 	ctx.stroke();
 	ctx.beginPath();
-	ctx.arc(200 + beta*200/90,200 + gamma*200/90,20,0,2*Math.PI,true);
+	ctx.arc(200 + u.beta*200/90,200 + u.gamma*200/90,20,0,2*Math.PI,true);
 	ctx.fillStyle="#FF0000";//se umple cercul cu culoarea este rosu
 	//ctx.fill();
 	ctx.strokeStyle="#00FF00";
 	ctx.lineWidth=5;
 	ctx.stroke(); 
  }
- var gamma = 0;
- var beta = 0;
+var ctx = canvas.getContext("2d");
+
+ var unghiuri={gamma:0, beta:0};
+ 
  setInterval(deseneaza_cerc,40);//,gamma,beta)
  //----------------------------------------------------------------
  function on_device_motion(e)

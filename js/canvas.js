@@ -1,10 +1,16 @@
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.0"
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.28.2";
 
-window.addEventListener("deviceorientation", on_device_orientation);
-//window.addEventListener("devicemotion", on_device_motion);
+//window.addEventListener("deviceorientation", on_device_orientation);
+window.addEventListener("devicemotion", on_device_motion);
 
 var canvas = document.getElementById("id_canvas");
 var ctx = canvas.getContext("2d");
+
+
+
+var unghiuri = {gamma:0, beta:0};
+setInterval(deseneaza_cerc, 40, unghiuri);
+
 
 //-----------------------------------------------------
 function deseneaza_cerc(u)
@@ -25,14 +31,16 @@ function deseneaza_cerc(u)
 //-----------------------------------------------------
 function on_device_orientation(e)
 {
-	deseneaza_cerc(e.gamma, e.beta);
+	//deseneaza_cerc(e.gamma, e.beta);
+	unghiuri.gamma = e.gamma;
+	unghiuri.beta = e.beta;
+	
 }
 //-----------------------------------------------------
 function on_device_motion(e)
 {
-	var beta = Math.atan(e.accelerationIncludingGravity.y / e.accelerationIncludingGravity.z) * 180 / Math.PI;
-	var gamma = -Math.atan(e.accelerationIncludingGravity.x / e.accelerationIncludingGravity.z) * 180 / Math.PI;
+	 unghiuri.beta = Math.atan(e.accelerationIncludingGravity.y / e.accelerationIncludingGravity.z) * 180 / Math.PI;
+	 unghiuri.gamma = -Math.atan(e.accelerationIncludingGravity.x / e.accelerationIncludingGravity.z) * 180 / Math.PI;
 	
-	deseneaza_cerc(gamma, beta);
+	//deseneaza_cerc(gamma, beta);
 }
-//-----------------------------------------------------

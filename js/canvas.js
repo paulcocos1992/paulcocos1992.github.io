@@ -42,4 +42,3 @@ function on_device_motion(e)
 	
 	deseneaza_cerc(gamma, beta);
 }
-[5:49 PM, 12/4/2017] Sandu: i senzori canvas

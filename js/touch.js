@@ -16,6 +16,7 @@ function on_start_touch(e)
 	for (var i = 0; i < touches.lenght; i ++) {
 		context.beginPath();
 		context.arc(touches.item(i).pageX, touches.item(i).pageY, 20, 0, 2 * Math.PI);
+		context.strokeStyle=liste_culori[i];
 		context.stroke();
 		
 	}

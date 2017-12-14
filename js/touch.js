@@ -1,4 +1,4 @@
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.1"
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.2"
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");

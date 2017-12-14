@@ -14,6 +14,7 @@ function on_start_touch(e)
 		context.beginPath();
 		context.arc(touches.item(i).pageX, touches.item(i).pageY, 20, 0, 2 * Math.PI);
 		context.strokeStyle = lista_culori[i];
+		context.lineWidth=5;
 		context.stroke();
 	}
 }

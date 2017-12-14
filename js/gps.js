@@ -8,6 +8,7 @@ function on_position_succes(e)
 	document.getElementById("id_lat").innerHTML = "Latitude = "+ e.coords.latitude;
 	document.getElementById("id_long").innerHTML = "Longitude = " +	e.coords.longitude;
 	document.getElementById("id_acc").innerHTML =  " Accuracy =" + e.coords.accuracy + "m";
+	document.getElementById("id_alt").innerHTML =  " Altitude =" + e.coords.altitude + "m";
 }
 //-------------------------------
 function on_position_failure(e)

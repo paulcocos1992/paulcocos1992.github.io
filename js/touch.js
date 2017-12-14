@@ -29,4 +29,4 @@ function on_move_touch(e)
 		context.strokeStyle = lista_culori[i];
 		context.stroke();
 	}
-	
+}

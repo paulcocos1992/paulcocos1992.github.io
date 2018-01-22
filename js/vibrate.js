@@ -5,8 +5,24 @@ d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0";
 
 var img = document.getElementById("id_img");
 img.addEventListener("touchstart", on_touch_start);
+img.addEventListener("touchend", on_touch_end);
+
 
 function on_touch_start(e)
 {
-	window.navigator.vibrate([100,100,200,200,300,300]);
+	timer_id = setInterval(start_vibrate, 100);
+
 }
+
+//-----------------------------------------------
+function start_vibrate()
+{
+	window.navigator.vibrate(150);
+	
+}
+//------------------------------------------
+function on_touch_end()
+{
+	clearInterval(timer_id);
+}
+//-------------------------------------------

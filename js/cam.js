@@ -5,7 +5,7 @@ var constraints={audio: true,video: true}; {facingMode: "environment"}};
 navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
 var video = document.getElementById("id_video");
 video.addEventListener("touchstart", on_touch_video);
-
+video.addEventListener("touchdown", on_touch_video);
 //^^^^^^^^^^^^^^^^6
 function on_cam(stream)
 {

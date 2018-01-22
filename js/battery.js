@@ -7,7 +7,7 @@ navigator.getBattery().then(on_battery).catch(on_battery_error);
 //------------------------------
 function on_battery(b)
 {
-	document.getElementById("id_battery").innerHTML = b.level;
+document.getElementById("id_battery").innerHTML = b.level + " " + b.charging;
 }
 //------------------------------
 function on_battery_error()

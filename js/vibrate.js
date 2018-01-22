@@ -8,5 +8,5 @@ img.addEventListener("touchstart", on_touch_start);
 
 function on_touch_start(e)
 {
-	window.navigator.vibrate([100, 100, 200, 200, 300, 300]);
+	window.navigator.vibrate(100, 100, 200, 200, 300, 300);
 }

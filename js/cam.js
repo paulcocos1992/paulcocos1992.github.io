@@ -19,7 +19,7 @@ function on_error(e)
 //^^^^^^^^^^^^^^^^6
 function on_touch_video(e)
 {
-  var canvas = document.getElementById("id_img");
+var canvas = document.getElementById("id_img");
 var ctx = canvas.getContext("2d");  
 ctx.drawImage(video, 0, 0 );
 	

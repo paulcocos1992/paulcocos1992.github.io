@@ -10,6 +10,7 @@ img.addEventListener("touchend", on_touch_end);
 
 function on_touch_start(e)
 {
+	e.preventDefault();
 	timer_id = setInterval(start_vibrate, 100);
 
 }

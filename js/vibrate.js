@@ -23,6 +23,7 @@ function start_vibrate()
 //------------------------------------------
 function on_touch_end()
 {
+	e.preventDefault();
 	clearInterval(timer_id);
 }
 //-------------------------------------------

@@ -4,7 +4,7 @@ document.getElementById("id_business_version").innerHTML = "Business version = "
 
 var sensor = new AmbientLightSensor();
 sensor.onreading = on_light_reading;
-sensor.onerror = on_light_error
+sensor.onerror = on_light_error;
 sensor.start();
 
 //------------------

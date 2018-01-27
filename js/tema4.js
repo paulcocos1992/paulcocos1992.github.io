@@ -28,7 +28,7 @@ function on_touch_end()
 	clearInterval(timer_id);
 }
 //-------------------------------------------
-function on_button_results(e)
+function on_speech_results(e)
 {
 	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript;
 	line(); // functia care traseaza linia

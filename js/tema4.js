@@ -5,14 +5,13 @@ img.addEventListener("touchstart", on_touch_start);
 img.addEventListener("touchend", on_touch_end);
 
 
-navigator.getBattery().then(on_battery).catch(on_battery_error);
-//------------------------------
+
 function on_touch_start(e)
 {
 document.getElementById("id_battery").innerHTML = b.level + " " + b.charging;
 }
 //------------------------------
-function on_battery_error()
+function on_touch_end(e)
 {
 	alert("Cannot read battery");
 }

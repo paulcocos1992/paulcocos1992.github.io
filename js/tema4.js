@@ -4,3 +4,9 @@ var img = document.getElementById("id_img");
 
 
 
+navigator.getBattery().then(function(battery) {
+    
+   var time = battery.chargingTime;
+
+   document.querySelector('#chargingTime').textContent = battery.chargingTime;
+});

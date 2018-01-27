@@ -22,18 +22,35 @@ function start_vibrate()
 	
 }
 //------------------------------------------
-function on_touch_end()
+var speech = new webkitSpeechRecognition();
+var lat ;
+var lon ; 
+speech.onresult = on_speech_results;
+speech.onspeechend = on_speech_end;
+speech.lang="en-US";
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+function recognize()
 {
-	e.preventDefault();
-	clearInterval(timer_id);
+	if(speech.start())
+	{}//rezolvare eroare incercare multipla de pornire speech recognition
 }
-//-------------------------------------------
+
+//####################################################
+
+function on_speech_end()
+{
+		speech.stop();
+	
+}
+//####################################################
 function on_speech_results(e)
 {
 	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript;
 	line(); // functia care traseaza linia
 }
 //#########################################
+
 function on_position_success(e) // functia care prezinta locatia utilizatorului
 { 
 	lat = e.coords.latitude;
@@ -47,5 +64,27 @@ function on_position_success(e) // functia care prezinta locatia utilizatorului
 	  ;
 	document.getElementById("id_img").src=map_str;
 	document.getElementById("id_explicatie").innerHTML = "Afisarea locatiei utilizatorului.";
+	
+}
+//#########################################
+function line(e)
+{
+		var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
+	  lat + "," + lon + "&zoom=15"+"&size=600x500"+
+"&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
+"&markers=color:blue|label:Z|"+
+	  lat  + "," + lon + 
+	  "&path=color:red|" + lat + "," + lon + "|" + document.getElementById("id_speech").innerHTML
+	  ;
+	document.getElementById("id_img").src=map_str;
+	document.getElementById("id_explicatie").innerHTML = "Trasarea liniei de conectare intre pozitia curentare si cea recunoscuta";
+		
+	
+}
+
+function on_position_failure(e)
+{
+	
+	alert("I'm lost!");
 	
 }

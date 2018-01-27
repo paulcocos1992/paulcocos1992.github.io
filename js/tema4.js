@@ -28,17 +28,40 @@ function on_touch_end()
 	clearInterval(timer_id);
 }
 //-------------------------------------------
-document.getElementById("id_business_version").innerHTML = "Business version = 2018.01.08.1";
+function on_position_success(e) // functia care prezinta locatia utilizatorului
+{ 
+	lat = e.coords.latitude;
+	lon = e.coords.longitude;
 
-navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
-
-//#########################################
-function on_position_success(e)
-{
-	 document.getElementById("id_lat").innerHTML = "Latitude =" +e.coords.latitude;
-	 document.getElementById("id_long").innerHTML ="Longitude =" +e.coords.longitude;
-	 document.getElementById("id_acc").innerHTML ="Accuracy =" +e.coords.accuracy + "m";
-	 document.getElementById("id_alt").innerHTML ="Altitude =" +e.coords.altitude + "m";
 	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
-	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=400x300"+
-"&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0";
+	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=600x500"+
+"&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
+"&markers=color:blue|label:Z|"+
+	  e.coords.latitude  + "," + e.coords.longitude 
+	  ;
+	document.getElementById("id_img").src=map_str;
+	document.getElementById("id_explicatie").innerHTML = "Afisarea locatiei utilizatorului.";
+	
+}
+//#########################################
+function line(e)
+{
+		var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
+	  lat + "," + lon + "&zoom=15"+"&size=600x500"+
+"&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
+"&markers=color:blue|label:Z|"+
+	  lat  + "," + lon + 
+	  "&path=color:red|" + lat + "," + lon + "|" + document.getElementById("id_speech").innerHTML
+	  ;
+	document.getElementById("id_img").src=map_str;
+	document.getElementById("id_explicatie").innerHTML = "Trasarea liniei de conectare intre pozitia curentare si cea recunoscuta";
+		
+	
+}
+
+function on_position_failure(e)
+{
+	
+	alert("I'm lost!");
+	
+}

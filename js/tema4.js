@@ -42,14 +42,3 @@ function on_position_success(e)
 	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
 	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0";
-document.getElementById("id_img").src=map_str;
-	
-}
-//#########################################
-function on_position_failure(e)
-{
-	
-	alert("I'm lost!");
-	
-}
-//cheia api google

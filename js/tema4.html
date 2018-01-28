@@ -60,37 +60,44 @@
 				</tr>
 			</table>
 			
-		</form>
+			<table>
+				<tr>
+					<td>Doriti telefonul sa va gaseasca locatia ? :</td>
+					<td>
+						<input type="radio" name="Raspuns">DA
+						<input type="radio" name="Raspuns">NU
+					</td>
+				</tr>
+				<tr>
+					<td><p id = "id_explicatie"></p></td>
+				</tr>
+				<tr>
+					<td><img id = "id_img"></img></td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+					
+						</p>
+					</td>
+				
+				</tr>
+				<tr>
+					<td>Doriti sa va fie afisata nivelul bateriei? :</td>
+					<td>
+						<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
+						<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="Bat"></p>
+					</td>
+				</tr>
+			
+			</table>
 		
-		<table>
-			<tr>
-				<td>Doriti telefonul sa va gaseasca locatia ? :</td>
-				<td>
-					<input type="radio" name="Raspuns">DA
-					<input type="radio" name="Raspuns">NU
-				</td>
-			</tr>
-			<tr>
-				<td><p id = "id_explicatie"></p></td>
-			</tr>
-			<tr>
-				<td><img id = "id_img"></img></td>
-			</tr>
-			
-			<tr>
-				<td>Doriti sa va fie afisata nivelul bateriei? :</td>
-				<td>
-					<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
-					<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p id="Bat"></p>
-				</td>
-			</tr>
-			
-		</table>
+		</form>
 	</body>
 		
 	<script src=tema4.js>

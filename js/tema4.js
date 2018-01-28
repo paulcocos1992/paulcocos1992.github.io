@@ -88,9 +88,9 @@ function on_battery(b)
 	
 }
 //------------------------------
-function on_battery_error()
+function on_battery_error(b)
 {
 	document.getElementById("batDa").checked=false;
-	document.getElementById("Bat").innerHTML="";
+	document.getElementById("Bat").innerHTML="Baterie";
 	//alert("Cannot read battery");
 }

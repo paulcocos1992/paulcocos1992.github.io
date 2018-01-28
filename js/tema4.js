@@ -2,7 +2,7 @@ var d = new Date ();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".2"; 
 
 
-var button = document.getElementById("id_button")
+button type = document.getElementById("id_button")
 navigator.getBattery().then(on_battery).catch(on_battery_error);
 //------------------------------
 function on_battery(b)

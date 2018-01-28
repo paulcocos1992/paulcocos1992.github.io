@@ -74,7 +74,7 @@
 				<td><p id = "id_explicatie"></p></td>
 			</tr>
 			<tr>
-				<img id = "id_img"></img>
+				<td><img id = "id_img"></img></td>
 			</tr>
 			
 			<tr>
@@ -84,19 +84,17 @@
 					<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<p id="Bat"></p>
+				</td>
+			</tr>
 			
 		</table>
 	</body>
 		
-		<p id="id_button"></p>
-		<p id="Bat"></p>
-		<p id="id_button"></p>
-		<img src= "" width ="600" height="500" id= "id_img"></img>
+	<script src=tema4.js>
 		
+	</script>
 		
-		<script src=tema4.js>
-			<button type ="button" onclick="navigator.getBattery().then(on_battery).catch(on_battery_error)">nivel baterie</button>
-			<p id="Bat"></p>
-		</script>
-		</body>
-		</html>
+</html>

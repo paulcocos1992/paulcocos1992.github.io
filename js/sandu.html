@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <body>
   <video width ="640" height="480"  id ="id_video" controls autoplay>Browser does not support video!</video>
-  <input type = "button" onclick="startVideo()">Start Video</input>
-  <input type = "button" onclick="stopVideo()">Stop Video</input>
-  <input type = "button" onclick="on_touch_video()">poza</input>
-  <input type = "button" onclick="on_touch_video()"> sterge poza</input>
+  <input type = "button" onclick="startVideo()" value="Start Video" ></input>
+  <input type = "button" onclick="stopVideo()" value="Stop Video" ></input>
+  <input type = "button" onclick="on_touch_video()" value="poza" ></input>
+  <input type = "button" onclick="stergePoza()" value="sterge poza" > </input>
   <canvas src= "" width ="640" height="480" id= "id_img"></canvas>
   <script src = "sandu.js"></script>
 <p>UI version = 2018.01.22.1</p>
 <p id="id_business_version"></p>
+
+
+<p id = "id_explicatie"></p>
+<img id = "id_img2"></img>
+
 </script>
 </body>
 </html>

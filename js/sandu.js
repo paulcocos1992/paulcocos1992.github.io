@@ -1,5 +1,5 @@
-var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
+//var d = new Date();
+//document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 //_______________________________________________###____________________________________________
 var constraints={
   audio: true,
@@ -8,16 +8,17 @@ var constraints={
 var constraints2={audio: true,video: { facingMode: { exact: "environment" } }};
 var video = document.getElementById("id_video");
 
-window.startVideo = function () {
+function startVideo() 
+{
 	if(mobile())
 	{
 		navigator.mediaDevices.getUserMedia(constraints2).then(on_cam).catch(on_error);
 	}
 	else{navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);}
-  
 }
 
-window.stopVideo = function () {
+function stopVideo() 
+{
   if (window.STREAM) {
     console.log(window.STREAM);
     var tracks = window.STREAM.getTracks();

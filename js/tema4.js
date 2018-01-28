@@ -17,7 +17,7 @@ function on_position_success(e) // prezinta locatia utilizatorului
 	  e.coords.latitude  + "," + e.coords.longitude 
 	  ;
 	document.getElementById("id_img").src=map_str;
-	document.getElementById("id_explicatie").innerHTML = "Afisarea locatiei utilizatorului.";
+	document.getElementById("id_explicatie").innerHTML = "Locatia dumneavoastra este:.";
 	
 }
 

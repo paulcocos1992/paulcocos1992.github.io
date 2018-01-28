@@ -62,7 +62,9 @@
 			
 			<table>
 				<tr>
-					<td>Doriti telefonul sa va gaseasca locatia ? :</td>
+					<td>
+						Doriti telefonul sa va gaseasca locatia ? :
+					</td>
 					<td>
 						<input type="radio" name="Raspuns">DA
 						<input type="radio" name="Raspuns">NU
@@ -83,10 +85,12 @@
 				
 				</tr>
 				<tr>
-					<td>Doriti sa va fie afisata nivelul bateriei? :</td>
+					<td>
+						Doriti sa va fie afisata nivelul bateriei? :
+					</td>
 					<td>
 						<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
-						<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
+						<input type="radio" id="batNu" onchange="navigator.getBattery().then(on_battery_error).catch(on_battery)" name="Raspuns">NU
 					</td>
 				</tr>
 				<tr>

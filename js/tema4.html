@@ -77,21 +77,16 @@
 				<img id = "id_img"></img>
 			</tr>
 			
-		</table>
-	</body>
-		
-	<script src = "vibrate.js"></script>
-		Doriti sa va fie afisata nivelul bateriei? : 
-				</td>
+			<tr>
+				<td>Doriti sa va fie afisata nivelul bateriei? :</td>
 				<td>
 					<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
 					<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
-					</td>
-				</tr>
-				</tr>
-				<td>
+				</td>
+			</tr>
+			
 		</table>
-		</form>	
+	</body>
 		
 		<p id="id_button"></p>
 		<p id="Bat"></p>

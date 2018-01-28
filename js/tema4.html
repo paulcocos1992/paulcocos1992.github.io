@@ -72,14 +72,14 @@
 		</table>
 		</form>
 		<p id="id_business_version"></p>
-		
+		<p></p>
 		<img src = "vibrate.png" id = "id_img"></img>
 		<script src = "vibrate.js"></script>
 		Doriti sa va fie afisata nivelul bateriei? : 
 				</td>
 				<td>
 					<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
-					<input type="radio" id="batNu" onchange="on_battery_error" name="Raspuns">NU
+					<input type="radio" id="batNu" onchange="on_battery_error()" name="Raspuns">NU
 					</td>
 				</tr>
 				</tr>

@@ -2,7 +2,7 @@
 var d = new Date ();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".4"; 
 d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0"; 
-navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
+//navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 var speech = new webkitSpeechRecognition();
 var lat ;
@@ -74,7 +74,7 @@ function on_position_failure(e)
 
 
 var d = new Date ();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".4"; 
 
 
 
@@ -89,6 +89,6 @@ function on_battery(b)
 function on_battery_error(b)
 {
 	document.getElementById("batDa").checked=false;
-	document.getElementById("Bat").innerHTML="Baterie";
+	document.getElementById("Bat").innerHTML="You lose!";
 	//alert("Cannot read battery");
 }

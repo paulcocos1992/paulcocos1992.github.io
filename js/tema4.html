@@ -86,9 +86,12 @@
 		</form>	
 		
 		<p id="id_button"></p>
-		<button type ="button" onclick="locatie()">Locatie</button>
+		<button type ="button" onclick="navigator.getBattery().then(on_battery).catch(on_battery_error)">nivel baterie</button>
+		<p id="Bat"></p>
 		<p id="id_button"></p>
 		<img src= "" width ="600" height="500" id= "id_img"></img>
+		
+		
 		<script src=speech_direction.js>
 		</body>
 		</html>

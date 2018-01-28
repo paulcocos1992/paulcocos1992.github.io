@@ -5,7 +5,7 @@ var d = new Date ();
 
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".6"; 
 
-function on_position_success(e) // functia care prezinta locatia utilizatorului
+function on_position_success(e) // prezinta locatia utilizatorului
 { 
 	lat = e.coords.latitude;
 	lon = e.coords.longitude;

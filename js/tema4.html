@@ -2,45 +2,45 @@
 <!DOCTYPE html>
 
 <html>	
-<head>
-	<title>Register Form</title>
+	<head>
+		<title>Register Form</title>
 	</head>
 	<body>
-	<p id="id_business_version"></p>
-	<form>
-		<table>
-			<tr>
-				<td>
-					Numele:
-				</td>
-				<td>
+		<p id="id_business_version"></p>
+		<form>
+			<table>
+				<tr>
+					<td>
+						Numele:
+					</td>
+					<td>
 						<input type = "text" placeholder="Numele" name="">
 					</td>
 				</tr>
 				<tr>
 					<td>
 					Parola:
-				</td>
-				<td>
+					</td>
+					<td>
 						<input type = "Password" placeholder="Parola" name="">
-				</td>
-				</tr>
-				<tr>
-				<td>
-				Gen : 
-				</td>
-				<td>
-					<input type="radio" name="Gender">Masculin
-					<input type="radio" name="Gender">Feminin
 					</td>
 				</tr>
+				<tr>
+					<td>
+						Gen : 
+					</td>
+					<td>
+						<input type="radio" name="Gender">Masculin
+						<input type="radio" name="Gender">Feminin
+					</td>
 				</tr>
-				<td>
-				Email:
-				</td>
-				<td>
-					<input type="mail"placeholder="Email" name="">
-				</td>
+				<tr>
+					<td>
+						Email:
+					</td>
+					<td>
+						input type="mail"placeholder="Email" name="">
+					</td>
 				</tr>
 				<tr>
 					<td>
@@ -55,26 +55,31 @@
 							<option>076</option>
 						</select>
 						<input type="Phone" placeholder="*******" name="">
-						</td>
-					</tr>
-				</table>
-			</form>
-			</body>
-				Doriti telefonul sa va gaseasca locatia ? :
-				</td>
+					</td>
+				</tr>
+			</table>
+			
+		</form>
+		
+		<table>
+			<tr><p>Doriti telefonul sa va gaseasca locatia ? :</p></tr>
+			<tr>
 				<td>
 					<input type="radio" name="Raspuns">DA
 					<input type="radio" name="Raspuns">NU
-					</td>
-				</tr>
-				</tr>
-				<td>
+				</td>
+			</tr>
+			<tr>
+				<p id = "id_explicatie"></p>
+			</tr>
+			<tr>
+				<img id = "id_img"></img>
+			</tr>
+			
 		</table>
-		</form>
-		<p id="id_business_version"></p>
-		<p></p>
-		<img src = "vibrate.png" id = "id_img"></img>
-		<script src = "vibrate.js"></script>
+	</body>
+		
+	<script src = "vibrate.js"></script>
 		Doriti sa va fie afisata nivelul bateriei? : 
 				</td>
 				<td>

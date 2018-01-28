@@ -1,10 +1,12 @@
 
 <!DOCTYPE html>
+
 <html>	
 <head>
 	<title>Register Form</title>
 	</head>
 	<body>
+	<p id="id_business_version"></p>
 	<form>
 		<table>
 			<tr>
@@ -73,11 +75,11 @@
 		
 		<img src = "vibrate.png" id = "id_img"></img>
 		<script src = "vibrate.js"></script>
-		Doriti telefonul sa vibreze? : 
+		Doriti sa va fie afisata nivelul bateriei? : 
 				</td>
 				<td>
-					<input type="radio" name="Raspuns">DA
-					<input type="radio" name="Raspuns">NU
+					<input type="radio" id="batDa" onchange="navigator.getBattery().then(on_battery).catch(on_battery_error)" name="Raspuns">DA
+					<input type="radio" id="batNu" onchange="on_battery_error" name="Raspuns">NU
 					</td>
 				</tr>
 				</tr>

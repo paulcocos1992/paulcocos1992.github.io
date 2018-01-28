@@ -101,10 +101,18 @@ document.getElementById("id_business_version").innerHTML = "Business version = "
 //------------------------------
 function on_battery(b)
 {
-document.getElementById("Bat").innerHTML = b.level + " " + b.charging;
+	if(document.getElementById("batDa").checked==true)
+	{
+		document.getElementById("batNu").checked=false;
+		document.getElementById("Bat").innerHTML = b.level + " " + b.charging;
+	}
+	else{document.getElementById("Bat").innerHTML="";}
+	
 }
 //------------------------------
 function on_battery_error()
 {
+	if(document.getElementById("batNu").checked==true)
+	{document.getElementById("batDa").checked=false; return;}
 	alert("Cannot read battery");
 }

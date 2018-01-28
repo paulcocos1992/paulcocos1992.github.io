@@ -5,13 +5,13 @@ d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0";
 
 
 
-//-------------------------------------------
-var img = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
-
-$(".button").on(isMobile ? 'touchstart' : 'mousedown', function(e) {
-    navigator.vibrate(Infinity); // Infinity is a number
-});
-
-$(".button").on(isMobile ? 'touchend' : 'mouseup', function(e) {
-    navigator.vibrate(0);
-});
+// Vibrate on completion
+var pattern = [500, 100, 500];
+$(".progress .bar")
+    .css({width: "0%"})
+    .animate({width: "100%"}, {
+        duration: 1000,
+        complete: function() {
+            if (canVibrate) navigator.vibrate(pattern);
+        }
+    });

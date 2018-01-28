@@ -71,10 +71,13 @@ function on_position_failure(e)
 	
 }
 
-
+function emptyPos()
+{
+	document.getElementById("id_img").src="";
+}
 
 var d = new Date ();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".4"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".5"; 
 
 
 

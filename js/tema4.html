@@ -71,9 +71,10 @@
 				<tr>
 					<td>
 						<input type="radio" onchange="navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure)" name="Raspuns">DA
-						<input type="radio" name="Raspuns">NU
+						<input type="radio" onchange="emptyPos()" name="Raspuns">NU
 					</td>
 				</tr>
+				
 				<tr>
 					<td><p id = "id_explicatie"></p></td>
 				</tr>

@@ -74,7 +74,7 @@ function on_position_failure(e)
 
 
 var d = new Date ();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".2"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 
 
 
@@ -82,10 +82,8 @@ document.getElementById("id_business_version").innerHTML = "Business version = "
 //------------------------------
 function on_battery(b)
 {
-	
 		document.getElementById("batNu").checked=false;
 		document.getElementById("Bat").innerHTML = b.level + " " + b.charging;
-	
 }
 //------------------------------
 function on_battery_error(b)
